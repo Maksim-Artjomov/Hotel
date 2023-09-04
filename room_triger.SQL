@@ -26,3 +26,35 @@ from deleted
 delete from room where id=1
 select * from room
 select * from room
+------------------------------
+create trigger room_uuendamine
+on room
+for update
+as
+insert into logi(kuupaev,kasutaja,andmed,tegevus)
+select getdate(),user,
+concat('vanad - ',
+deleted.number,
+', ',
+deleted.name,
+', ',
+deleted.status,
+', ',
+deleted.smoke,
+' uued - ',
+deleted.number,
+', ',
+deleted.name,
+', ',
+deleted.status,
+', ',
+deleted.smoke),
+'room on uuendatud'
+from deleted inner join inserted
+on deleted.id=inserted.id
+--kontroll
+select * from room
+update room set smoke=1
+where id=4
+select * from room
+select * from logi
