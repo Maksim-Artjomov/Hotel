@@ -11,11 +11,11 @@ deleted.last_name,
 ', ',
 deleted.member_since,
 ' uued - ',
-deleted.first_name,
+inserted.first_name,
 ', ',
-deleted.last_name,
+inserted.last_name,
 ', ',
-deleted.member_since),
+inserted.member_since),
 'guest on uuendatud'
 from deleted inner join inserted
 on deleted.id=inserted.id
@@ -41,13 +41,13 @@ deleted.status,
 ', ',
 deleted.smoke,
 ' uued - ',
-deleted.number,
+inserted.number,
 ', ',
-deleted.name,
+inserted.name,
 ', ',
-deleted.status,
+inserted.status,
 ', ',
-deleted.smoke),
+inserted.smoke),
 'room on uuendatud'
 from deleted inner join inserted
 on deleted.id=inserted.id
