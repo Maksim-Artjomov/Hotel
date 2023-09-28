@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="formStyle.css">
+    <title>Muusika ankeet</title>
+    <style>
+        /* Стиль для заголовка страницы */
+        h1 {
+            text-align: center; /* Выравнивание текста по центру */
+        }
+    </style>
+</head>
+<body>
+<h1>Muusika ankeet</h1>
+<form name="ankeet">
+    <table>
+        <tr>
+            <td><strong>1. Ees- ja perekonnanimi:</strong></td>
+            <td><input type="text" name="nimi" id="nimi" placeholder="tekst"></td>
+        </tr>
+        <tr>
+            <td><strong>2. Vanus</strong></td>
+            <td>
+                <label for="1">10-17:</label>
+                <input type="radio" name="1" id="1"><br>
+                <label for="2">18-26:</label>
+                <input type="radio" name="2" id="2"><br>
+            </td>
+        </tr>
+        <tr>
+            <td><strong>3. Rühm</strong></td>
+            <td>
+                <label for="tarpv20">TARpv20:</label>
+                <input type="radio" name="ryhm" id="tarpv20"><br>
+                <label for="tarpv21">TARpv21:</label>
+                <input type="radio" name="ryhm" id="tarpv21"><br>
+            </td>
+        </tr>
+        <tr>
+            <td><strong>4. Lemmiklaulu nimi:</strong></td>
+            <td><input type="text" name="lemmik" id="lemmik" placeholder="tekst"></td>
+        </tr>
+        <tr>
+            <td><strong>5. Millист muusika sa kuulad?</strong></td>
+            <td>
+                <input type="checkbox" name="jazz" id="jazz">
+                <label for="jazz">Jazz</label><br>
+                <input type="checkbox" name="blues" id="blues">
+                <label for="blues">Blues</label><br>
+            </td>
+        </tr>
+        <tr>
+            <td><strong>6. Mida sa arvad muusika kuulamisest koolis?</strong></td>
+            <td>
+                <label for="5">Muusikat saab kuulata pidevalt:</label>
+                <input type="radio" name="5" id="5"><br>
+                <label for="6">Muusikat saab kuulata vahetunnis:</label>
+                <input type="radio" name="6" id="6"><br>
+            </td>
+        </tr>
+        <tr>
+            <td><strong>7. Mitu tundi päevast sa kuulad muusikat?</strong></td>
+            <td>
+                <label for="quantity">(0-24):</label>
+                <input type="number" id="quantity" name="quantity" min="0" max="24">
+            </td>
+        </tr>
+        <tr>
+            <td><strong>8. Kas saate ka muusikat kuulata telefonist?</strong></td>
+            <td><input type="color" id="favcolor" name="favcolor" value="#000000"></td>
+        </tr>
+        <tr>
+            <td><strong>9. Kas saate ka muusikat kuulata telefonist?</strong></td>
+            <td>
+                <label for="9">Jah:</label>
+                <input type="radio" name="9" id="9"><br>
+                <label for="10">Veel nagu:</label>
+                <input type="radio" name="10" id="10"><br>
+            </td>
+        </tr>
+        <tr>
+            <td><strong>10. Kas sa kuulad raadiot?</strong></td>
+            <td>
+                <label for="13">Jah:</label>
+                <input type="radio" name="13" id="13"><br>
+                <label for="14">Ei:</label>
+                <input type="radio" name="14" id="14"><br>
+            </td>
+        </tr>
+        <tr>
+        <tr>
+            <td><strong>11. Kes muusikuid/ ansambleid sa tead?:</strong></td>
+            <td><input type="text" name="ans" id="ans" placeholder="tekst"></td>
+        </tr>
+        <tr>
+            <td><strong>12. Millises rakenduses sa muusikat kuulad?</strong></td>
+            <td>
+                <select name="rakendus" id="rakendus">
+                    <option>Vali...</option>
+                    <option>Spotify</option>
+                    <option>Deezer</option>
+                    <option>YouTube Music</option>
+                    <option>SoundCloud</option>
+                    <option>Yandex</option>
+                    <option>Last.fm</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td><strong>13. Millises seadmes sa kõige sagedamini muusikat kuulad?</strong></td>
+            <td>
+                <label for="telefon">Telefon:</label>
+                <input type="radio" name="telefon" id="telefon"><br>
+                <label for="arvuti">Arvuti:</label>
+                <input type="radio" name="arvuti" id="arvuti"><br>
+                <label for="tablett">Tablett:</label>
+                <input type="radio" name="tablett" id="tablett"><br>
+                <label for="sul">Sülearvuti:</label>
+                <input type="radio" name="sul" id="sul"><br>
+            </td>
+        </tr>
+        </tr>
+        <tr>
+            <td><strong>14. Sisesta lähima kontserdi kuupäev, kuhu lähed.</strong></td>
+            <td><input type="month" id="month" name="month"></td>
+        </tr>
+    </table>
+    <input type="reset" value="Lähesta">
+    <input type="button" value="OK">
+</form>
+</body>
+</html>
